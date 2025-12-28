@@ -1,18 +1,34 @@
-const express=require("express")
+const express = require("express");
+const { connectDB } = require("./config/database");
+const app = express();
+const User = require("./models/user")
 
-const app=express(); 
-
-app.use("/",(req,res)=>{
-    res.send("Hello from server!")  
+app.post("/signup",async (req,res)=>{
+    const userObj= {
+        firstName:"Ananya",
+        lastName:"Mohanta",
+        emailId:"ananya@gmail.com",
+        password:"abc@123"
+    }
+    const user = new User(userObj) 
+    try {
+        await user.save(); 
+    res.send("User added succesfully")
+    } catch (error) {
+        res.status(500).send("Error saving the data",error.message)
+    }
+    
 })
-app.use("/test",(req,res)=>{
-    res.send("Hello from server for /test!")  
-})
 
-app.listen(3000,()=>{
-    console.log("Server is listening on port 3000")
-}) 
-//handling any incoming request
-//expressjs application -- this is like creating web server using express framwork
-//listen on a port 
-//request handler -callbak function
+
+
+connectDB()
+  .then(() => {
+    console.log("Database connection successful!");
+    app.listen(3000, () => {
+      console.log("Server is listening on port 3000");
+    });
+  })
+  .catch((err) => {
+    console.log("Database can't be connected");
+  });

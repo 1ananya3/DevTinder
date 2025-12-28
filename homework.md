@@ -10,4 +10,31 @@
 # what is the use of "-g" while npm install
 # Difference  between caret  vs tilde (^ vs ~)
 
+# Initialize git
+ -- gitignore
+ -- Create a remote repo on github
+ -- Push all codes to remote origin
+ -- Play with the routes and route extensions ex. /hello , /hello/2
+# Install postman and make workspace/collection -> test get api call 
+- Write logic to handle get, post, patch, delete api calls and test them on postman
+- Explore routing and use of ?, +, (), * in the routes
+- Use of regex in routes /a/, /.*fly$/
+- Reading the query params in the routes
+- Reading the dynamic rutes
+- Multiple route handlers - Play with the code
+- next()
+- next function and errors along with res.send()
+- app.use("/routes", rh, [rh2,rh3],rh4,rh5)
+- what is middleware
+- how express js basically handles requests behind the scenes
+- diff b/w app.use vs app.all
+- write a dummy auth middleware for admin
+- write a dummy auth middleware for all user route except /user/logn
+- error hnadling using app.use("/",(err,req,res,next)={})
+
+# MongoDB
+- 
+
+
+
 
