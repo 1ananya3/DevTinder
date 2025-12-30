@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
     }
    },
   age: { type: Number,min:18 },
-  gender: { type: String ,
+  gender: { type: String , //use enum here
     validate(value){
       if(!["male",'female',"others"].includes(value)){
         throw new Error("Gender data is not validated succesfully!")

@@ -13,6 +13,8 @@
 ## connectionRequestRouter
 - Post /request/send/intested/:userId
 - Post /request/send/ignored/:userId 
+- Post /request/send/:status/:userId 
+
 - Post /request/review/accepted/:requestId
 - Post /request/review/rejected/:requestId
 
@@ -22,3 +24,7 @@
 - Get /user/feed - Gets you the profiles of other users on platform
 Status : ignore, interested, accept, reject
 
+ {
+        "emailId":"hdfc@gmail.com",
+        "password":"hdfcBacnk@123"
+ }
