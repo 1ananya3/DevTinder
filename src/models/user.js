@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 var validator = require('validator');
 const jwt = require("jsonwebtoken");
-const { default: isEmail } = require("validator/lib/isEmail");
+const bcrypt = require("bcrypt");
+
 const userSchema = new mongoose.Schema({
   firstName: { type: String, required: true },
   lastName: { type: String },
