@@ -30,6 +30,9 @@ connectionRequestSchema.pre("save",function(next){
     }
     next
 })
+// connectionRequest.find({fromUserId:kdfjhjkhfrhf, toUserId:jhsdbjsdj}) 
+connectionRequestSchema.index({fromUserId:1, toUserId:1})
+
 const ConnectionRequestModel = mongoose.model(
   "ConnectionRequest",
   connectionRequestSchema
