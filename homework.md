@@ -33,8 +33,14 @@
 - error hnadling using app.use("/",(err,req,res,next)={})
 
 # MongoDB
-- 
+- Create a free cluster on mongodb official website (mongodb atlas)
+- Install mongoose library
+- Connect your application to the database "connection-url/devTinder"
+- call the connectdb function and connect to database before starting application on 3000
+- Create a userSchema & UserModel
+- Create post api /signup to add data to db
+- push some documents using api calls from postman
+- error handling using try catch
 
 
-
-
+- Diff b/w json and javascript object
